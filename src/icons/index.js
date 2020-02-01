@@ -1,0 +1,25 @@
+import fs from 'fs'
+
+export default {
+  logo: fs.readFileSync('src/img/logo.svg', 'utf8'),
+  bell: fs.readFileSync('src/img/icon-bell.svg', 'utf8'),
+  calendar: fs.readFileSync('src/img/icon-calendar.svg', 'utf8'),
+  settings: fs.readFileSync('src/img/icon-settings.svg', 'utf8'),
+  user: fs.readFileSync('src/img/icon-user.svg', 'utf8'),
+  signout: fs.readFileSync('src/img/icon-sign-out.svg', 'utf8'),
+  home: fs.readFileSync('src/img/icon-home.svg', 'utf8'),
+  graduation: fs.readFileSync('src/img/icon-graduation.svg', 'utf8'),
+  file: fs.readFileSync('src/img/icon-file.svg', 'utf8'),
+  edit: fs.readFileSync('src/img/icon-edit.svg', 'utf8'),
+  view: fs.readFileSync('src/img/icon-view.svg', 'utf8'),
+  add: fs.readFileSync('src/img/icon-add.svg', 'utf8'),
+  menu: fs.readFileSync('src/img/icon-menu.svg', 'utf8'),
+  print: fs.readFileSync('src/img/icon-print.svg', 'utf8'),
+  trash: fs.readFileSync('src/img/icon-trash.svg', 'utf8'),
+  search: fs.readFileSync('src/img/icon-search.svg', 'utf8'),
+  sort: fs.readFileSync('src/img/icon-sort.svg', 'utf8'),
+  close: fs.readFileSync('src/img/icon-close.svg', 'utf8'),
+  'caret-down': fs.readFileSync('src/img/icon-caret-down.svg', 'utf8'),
+  'double-check': fs.readFileSync('src/img/icon-double-check.svg', 'utf8'),
+  'user-add': fs.readFileSync('src/img/icon-user-add.svg', 'utf8'),
+}

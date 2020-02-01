@@ -1,0 +1,380 @@
+//Butons
+.button {
+  padding: 10px 12px;
+  transition: all 250ms;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 400;
+
+  svg {
+    transition: all 200ms;
+  }
+
+  &:before {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $blue;
+    content: "";
+    z-index: -1;
+    transition: all 250ms;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    .icon {
+      svg {
+        stroke: $light;
+        fill: $light;
+      }
+    }
+
+    &:before {
+      width: 100%;
+    }
+  }
+
+  &.button-primary {
+    border: 0;
+    border-radius: 4px;
+    background-color: $default;
+    color: $light;
+  }
+
+  &.button-full {
+    width: 100%;
+  }
+
+  &.button-circle {
+    border-radius: 100%;
+  }
+
+  &.button-light {
+    border-radius: 4px;
+    background-color: $light;
+    color: $default;
+    border: 0;
+    box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.1);
+  }
+
+  &.button-clean {
+    background: transparent;
+    border-radius: 0;
+    border: 0;
+    color: $dark;
+
+    &:before {
+      display: none;
+    }
+
+    &:hover {
+      .icon {
+        svg {
+          stroke: $dark !important;
+          fill: $dark !important;
+        }
+      }
+    }
+  }
+
+  &[disabled] {
+    background-color: $gray;
+    color: rgba($color: $dark, $alpha: 0.3);
+    cursor: initial;
+
+    svg {
+      stroke: rgba($color: $dark, $alpha: 0.3) !important;
+      fill: rgba($color: $dark, $alpha: 0.3) !important;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+// Form
+
+form {
+  .button {
+    padding: 15px 35px;
+  }
+
+  .form-group {
+
+    input,
+    select {
+      &[disabled] {
+        background: #eee;
+      }
+    }
+  }
+}
+
+// Forms
+.form-group {
+  margin-bottom: 30px;
+
+  label {
+    color: $blue;
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  input,
+  select {
+    padding: 10px 10px;
+    border: 1px solid rgba($color: $dark, $alpha: 0.4);
+    border-radius: 3px;
+    transition: all 250ms;
+
+    &:focus {
+      outline: none;
+      border-color: rgba($color: $default, $alpha: 0.9);
+    }
+
+    &[type="checkbox"] {
+      border-color: $default;
+
+      ~svg {
+        color: $default;
+      }
+
+      &:checked {
+        ~svg {
+          color: $default;
+        }
+      }
+    }
+  }
+
+  &.touch {
+    position: relative;
+
+    label {
+      position: absolute;
+      left: 10px;
+      top: -10px;
+      background: $light;
+      display: inline-block;
+      width: auto;
+      padding: 2px;
+      margin: 0 auto;
+      color: rgba($color: $dark, $alpha: 0.5);
+    }
+  }
+
+  &.error {
+
+    input,
+    select {
+      border-color: salmon;
+    }
+
+    label {
+      color: salmon;
+    }
+
+    span {
+      font-size: 10px;
+      margin-top: 5px;
+      display: block;
+      color: salmon;
+    }
+  }
+}
+
+.popper-content {
+  background-color: $light;
+  display: flex;
+  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+  flex-direction: column;
+  border-radius: 2px;
+
+  a {
+    padding: 15px;
+    font-size: 12px;
+    text-decoration: none;
+    color: $link;
+
+    .icon {
+      margin-right: 2px;
+      bottom: 1px;
+      position: relative;
+
+      svg {
+        fill: $link;
+        stroke: $link;
+        margin-right: 5px;
+      }
+    }
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+}
+
+.row {
+  flex: 1;
+  width: 100%;
+  margin: 0 -15px 30px !important;
+}
+
+.card {
+  .card-content {
+    background-color: $light;
+    padding: 50px 30px;
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.05);
+    border-radius: 5px;
+
+    .circle {
+      border-radius: 100%;
+      width: 40px;
+      height: 40px;
+      background: rgba($color: #000000, $alpha: 0.1);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+
+      svg {
+        fill: $link;
+        stroke: $link;
+      }
+
+      &.blue {
+        background: rgba($color: $default, $alpha: 0.05);
+
+        svg {
+          fill: $default;
+          stroke: $default;
+        }
+      }
+
+      &.yellow {
+        background: rgba($color: #f2c134, $alpha: 0.05);
+
+        svg {
+          fill: #f2c134;
+          stroke: #f2c134;
+        }
+      }
+
+      &.purple {
+        background: rgba($color: #866af7, $alpha: 0.05);
+
+        svg {
+          fill: #866af7;
+          stroke: #866af7;
+        }
+      }
+
+      &.green {
+        background: rgba($color: #3ac33a, $alpha: 0.05);
+
+        svg {
+          fill: #3ac33a;
+          stroke: #3ac33a;
+        }
+      }
+    }
+
+    .number {
+      font-size: 52px;
+      margin: 15px 0 5px;
+      color: $dark;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    h4 {
+      text-align: center;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    h3 {
+      font-size: 16px;
+      color: $dark;
+      font-weight: normal;
+    }
+  }
+}
+
+.chart-block {
+  margin-top: 50px;
+  width: 100%;
+  height: 300px;
+
+  .recharts-wrapper {
+    .recharts-surface {
+      text {
+        fill: $link;
+        font-size: 14px;
+
+        &.light {
+          fill: $light;
+        }
+      }
+
+      .recharts-tooltip-cursor {
+        fill: rgba($color: #000000, $alpha: 0.05);
+      }
+    }
+
+    .recharts-tooltip-wrapper {
+      .recharts-default-tooltip {
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
+        border-radius: 2px;
+        border: 0 !important;
+
+        .recharts-tooltip-label {
+          font-weight: 700;
+          margin-bottom: 10px;
+          font-size: 18px;
+        }
+      }
+
+      .recharts-tooltip-item-list {
+        font-size: 14px;
+
+        li {
+          margin: 0;
+          padding: 0;
+
+          p {
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.swal-modal {
+  box-shadow: -1px 1px 0.1px 1px rgba($color: #000000, $alpha: 0.2);
+
+  .swal-title {
+    margin-bottom: 0;
+  }
+
+  .swal-button {
+    padding: 15px 40px;
+  }
+
+  .swal-footer {
+    text-align: center;
+  }
+}
