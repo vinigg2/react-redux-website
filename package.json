@@ -71,7 +71,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "cross-env": "^5.1.6",
     "cssnano": "^4.1.7",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "parcel-bundler": "^1.12.3",
     "sass-loader": "^8.0.0"
   }
